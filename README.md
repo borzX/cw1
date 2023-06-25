@@ -7,4 +7,5 @@
 [“Russia”, “Denmark”, “Kazan”] → []
 
 Блок схема:
-![Блок-схема](block_diagram.png)
+
+![Alt text](<block _diagram.png>)
