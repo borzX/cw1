@@ -1,13 +1,22 @@
-﻿string[] testArray = new string[4]{"Hello", "2", "world", ":-)"};
+﻿Console.Write($"Введите длинну массива: ");
+int arrayTestLength = Convert.ToInt32(Console.ReadLine());
+string[] testArray = new string[arrayTestLength];
 int arrayTempLength = 0;
+
+for (int i=0; i<arrayTestLength; i++)
+{
+    Console.Write($"Введите значение {i}-го индекса массива: ");
+    testArray[i] = Console.ReadLine()!.ToString();
+}
+
+Console.WriteLine($"Исходный массив:");
+Console.WriteLine(string.Join(", ", testArray));
 
 for (int i=0; i<testArray.Length; i++)
 {
     if (testArray[i].Length<=3)
     {
-        arrayTempLength++;
-        Console.WriteLine($"Длина а {arrayTempLength}");
-        
+        arrayTempLength++;      
     }
 }
 
@@ -19,8 +28,8 @@ for (int i=0; i<testArray.Length; i++)
     {
         arrayTemp[arrayTempIndex]=testArray[i];
         arrayTempIndex++;
-        Console.WriteLine($"Длина б {arrayTempLength}");
     }
 }
 
+Console.WriteLine($"Полученный массив:");
 Console.WriteLine(string.Join(", ", arrayTemp));
